@@ -1,0 +1,178 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Zone</title>
+    <script src="https://kit.fontawesome.com/828ceca135.js" crossorigin="anonymous"></script>
+
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="homePage.css">
+    <style>
+
+    </style>
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="navbar">
+            <a href="homepagev2.html"><i class="fa-solid fa-house"></i></a>
+            <img src="album/MuseZone1.png">
+            <div class="user-dropdown" onclick="toggleDropdown()">
+                <span class="material-symbols-outlined">
+                    account_circle
+                </span>
+                <div class="dropdown-content" id="dropdownContent">
+                    <a href="login.html" id="loginLink" onclick="login()">Login</a>
+                    <a href="#" id="logoutLink" onclick="logout()">Logout</a>
+                </div>
+            </div>
+        </nav>
+
+        <div class="container">
+            <div class="list-song">
+                <a href="Dangdut/denny_caknan.html">
+                    <img src="album/denny-caknan-foto-instagramdenny_caknan-6 (1).jpg">
+                    <div class="deskripsi">
+                        <h4>Kalih Welas</h4>
+                        <p>Denny Caknan</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-song">
+                <a href="Rock/dear_god.html">
+                    <img src="Rock/Cover/DearGodCover.jpg">
+                    <div class="deskripsi">
+                        <h4>Dear God</h4>
+                        <p>Avenged Sevenfold</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-song">
+                <a href="Pop/juicyluicy.html">
+                    <img src="album/juicylucy.jpg">
+                    <div class="deskripsi">
+                        <h4>Tampar</h4>
+                        <p>Juicy Luicy</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-song">
+                <a href="Dangdut/happy_asmara.html">
+                    <img src="album/happy asmara.jpg">
+                    <div class="deskripsi">
+                        <h4>Santri Pekok</h4>
+                        <p>Happy Asmara</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-song">
+                <a href="Dangdut/gilga_sahid.html">
+                    <img src="album/gilga sahid.jpeg.jpg">
+                    <div class="deskripsi">
+                        <h4>Nemen</h4>
+                        <p>Gilga Sahid</p>
+                    </div>
+                </a>
+            </div>
+            <div class="list-song">
+                <a href="Rock/dream_on.html">
+                    <img src="Rock/Cover/aerosmith.jpg">
+                    <div class="deskripsi">
+                        <h4>Dream On</h4>
+                        <p>Aerosmith</p>
+                    </div>
+                </a>
+
+            </div>
+        </div>
+        <div class="playlist">
+            <h2>Playlist</h2><br>
+            <div class="list">
+                <div class="list-genre">
+                    <a href="Rock.html">
+                        <center><img src="album/Rock.png"></center>
+                        <p>Music Rock</p>
+                        <p>By Muse Zone</p>
+                    </a>
+                </div>
+                <div class="list-genre">
+                    <a href="pop.html">
+                        <center><img src="album/Pop.png"></center>
+                        <p>Music Pop</p>
+                        <p>By Muse Zone</p>
+                    </a>
+                </div>
+                <div class="list-genre">
+                    <a href="dangdut.html">
+                        <center><img src="album/Dangdut.png"></center>
+                        <p>Music Dangdut</p>
+                        <p>By Muse Zone</p>
+                    </a>
+                </div>
+                <div class="list-genre">
+                    <a href="popularSong.html">
+                        <center><img src="album/popularSong.jpeg"></center>
+                        <p>Popular Song</p>
+                        <p>By Muse Zone</p>
+                    </a>
+                </div>
+
+            </div>
+        </div>
+        <div class="artist">
+            <h2>Artist</h2><br>
+            <div class="list">
+                <div class="list-artist">
+                    <a href="pamungkas.html">
+                        <center><img src="Pop/pamungkas.jpg"></center>
+                        <p>Pamungkas</p>
+                        <p>Artist</p>
+                    </a>
+                </div>
+                <div class="list-artist">
+                    <a href="juicyluicy.html">
+                        <center><img src="Pop/juicyluicy.jpg"></center>
+                        <p>Juicy Lucy</p>
+                        <p>Artist</p>
+                    </a>
+                </div>
+                <div class="list-artist">
+                    <a href="mahalini.html">
+                        <center><img src="Pop/mahalini.jpeg"></center>
+                        <p>Mahalini</p>
+                        <p>Artist</p>
+                    </a>
+                </div>
+                <div class="list-artist">
+                    <a href="nadinAmizah.html">
+                        <center><img src="Pop/nadin amizah.png"></center>
+                        <p>Nadin Amizah</p>
+                        <p>Artist</p>
+                    </a>
+                </div>
+                
+                
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleDropdown() {
+            var dropdownContent = document.getElementById("dropdownContent");
+            dropdownContent.style.display = (dropdownContent.style.display === "block") ? "none" : "block";
+        }
+
+        function login() {
+            window.location.href = 'playlist.html'
+        }
+
+        function logout() {
+            alert("Kamu telah Logout");
+            // Tambahkan logika logout di sini
+        }
+    </script>
+</body>
+
+</html>

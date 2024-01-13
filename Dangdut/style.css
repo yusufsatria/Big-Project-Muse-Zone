@@ -1,0 +1,232 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    box-sizing: border-box;
+}
+.containerbase{ 
+    width: 100%;
+    height: 100vh;
+    background: radial-gradient(circle, rgba(12,11,13,1) 6%, rgba(126,0,143,1) 89%);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+.player-actual{
+    width: 100%;
+    padding: 25px 35px;
+    text-align: center; 
+}
+nav{ /* untuk navigasi musik */
+    display: flex;
+    justify-content: space-between;
+    margin-bottom: 30px;
+}
+
+.logo{
+    display: flex;
+    width: 200px;
+}
+
+nav .circle{
+    border-radius: 50%;
+    width: 40px;
+    height: 40px;
+    line-height: 40px;
+    background: #EEEEEE;
+    color: #757575;
+    box-shadow: 0 5px 10px rgba(255, 26, 26, 0.22);
+}
+
+.cover-img{ /* cover musik / album musik */
+    width: 220px;
+    height: 220px;
+    border: 8px solid #EEEEEE;
+    box-shadow: 0px 10px 60px rgba(255, 26, 26, 0.22);
+}
+
+.player-actual h1{ /*base dari player (kotak persegi panjang) */
+    font-size: 20px;
+    font-weight: 400;
+    color:#ffffff;
+    margin-top: 20px;
+}
+
+.player-actual p{
+    font-size: 14px;
+    color:#ffffff;
+}
+
+#progress{ /*ini yang akan mengontrol musik */
+    width: 100%;
+    height: 10px;
+    background: #40ff00;
+    border-radius: 4px;
+    cursor: pointer;
+    margin: 40px 0;
+}
+#progress {/*css mengatur konten pad song-slider*/
+    width: 90%; /*untuk mengatur lebar*/
+    position: relative; /*untuk membuat posisi suatu element bisa dipindah-pindahkan*/
+  }
+  
+#progress {/*css mengatur konten pada seek-bar*/
+  appearance: none;
+  width: 90%;/*mengatur lebar*/
+  height: 4px;/*mengatur tinggi*/
+  border-radius: 10px; /*agar sudut tidak terlalu lancip*/
+  cursor: pointer;
+  overflow: hidden;/*membuat slider terlihat seperti garis persegi panjang*/
+}
+#progress::-moz-range-thumb { /*membuat pointern menjadi kotak*/
+    border: none; /*menghilangkan garis pada thumb slider*/
+    width: 25px; /*mengatur lebar slider*/
+    height: 20px;/*mengatur tinggi*/
+    background: #ffffff;/**/
+    cursor: pointer;
+  }
+.control{
+    display: flex; 
+    justify-content: center;
+    align-items: center;
+}
+
+#volume{
+    text-align: right;
+    justify-content: right;
+}
+
+.control :hover{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: #454545;
+
+}
+
+#progressBar {
+    width: 100%;
+    height: 10px;
+    background-color: #EEEEEE;
+    position: relative;
+    margin-bottom: 20px;
+}
+
+.timing{/*css mengatur konten pada duration_meter*/
+    display: flex;
+    justify-content: space-between;/*agar item saling berjajar dan berjarak*/
+    padding-left: 5%;
+    color: #ffffff;
+    padding-right: 5%;
+    font-size: 12;
+}
+.audio-control{
+    position: relative;
+    margin-bottom: 20px;
+    margin-left: 44%;
+    align-items: center;
+    justify-content: center;
+    width: 12%;
+    border-bottom-left-radius: 50px;
+    border-top-left-radius: 50px;
+    box-shadow: 0 10px 20px rgba(255, 255, 255, 0.564); /*untuk memberikan efek bayangan*/
+    background: linear-gradient(110deg, #40ff00 60%, #269800 60%);
+}
+.mute{
+    justify-content: left;
+    border-radius: 50%;
+    text-align: center;
+    width: 30px;
+    height: 30px;
+    cursor: pointer;
+}
+.volume-musik{/*css mengatur konten pada volume-bar*/
+    text-align: center;/*untuk membuat posisi suatu element bisa dipindah-pindahkan*/
+    appearance: none;
+    margin-bottom: 1%; 
+    width: 75%; /*memberikan lebar objek*/
+    height: 5px;
+    border-radius: 10px; /*untuk memberi tepian suatu objek*/
+    cursor: pointer; /*untuk mengaktifkan atau mengontrol element tertentu dalam antarmuka pengguna grafis*/
+    overflow: hidden; /*untuk menyembunyikan konten yang keluar dari wadah dimana tinggi dan lebarnya melebihi dari konten*/
+  }
+  .volume-musik::-webkit-slider-thumb {/*css mengatur konten pada volume-bar::-webkit-slider-thumb*/
+    appearance: none;
+    color: #EEEEEE;
+    width: 0px;/*untuk mengatur lebar*/
+    height: 20px;/*untuk mengatur tinggi*/
+  }
+
+  .volume-musik::-moz-range-thumb {
+    border: none;
+    width: 10px;
+    height: 20px;
+    background: #000000;
+    cursor: pointer;}
+    
+.control div{
+    width: 60px;
+    height: 60px;
+    margin: 20px;
+    background: #EEEEEE;
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    border-radius: 50px;
+    color:#565656;
+    box-shadow: 0 10px 20px rgba(255, 26, 26, 0.22);
+    cursor: pointer;
+}
+
+.control div:nth-child(2){
+    transform: scale(1.5);
+    background: #ffffff;
+    color:#40ff00;
+}
+
+.control div:nth-child(2):hover{
+    transform: scale(1.6);
+    background: #555555;
+    color:#40ff00;
+}
+.list{
+  text-align: center;
+  width: 100%;
+  height: 20px;
+  background-color:#40ff00;
+
+}
+.container {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  justify-content: space-between;
+  gap: 5px;
+  padding: 0 10px 10px 10px;
+  background: radial-gradient(circle, rgba(12,11,13,1) 6%, rgba(126,0,143,1) 89%);
+  justify-items: center;
+}
+.list-song a {
+  width: 355px;
+  display: flex; 
+  align-items: center;
+  padding: 8px;
+  background-color: #eff8ff;
+  border-radius: 10px;
+}
+.list-song a:hover {
+  background-color:rgb(243, 209, 243);
+  transition: 0.15s;
+  border-radius: 10px;
+  /* color: rgba(0, 106, 255, 0.863); */
+  scale: 102%;
+}
+.list-song img {
+  width: 70px;
+  height: 70px;
+  margin-right: 10px;
+  border-radius: 10px;
+}
+.deskripsi{
+  text-align: left;
+}

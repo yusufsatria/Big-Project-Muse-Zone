@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Muse Zone Music Player</title>
+    <link rel="stylesheet" href="style.css" />
+    <script
+      src="https://kit.fontawesome.com/36da94211e.js"
+      crossorigin="anonymous"
+    ></script>
+  </head>
+
+  <body>
+    <div class="containerbase">
+      <div class="player-actual">
+        <nav>
+          <div class="circle">
+            <a href="../dangdut.html"><i class="fa-solid fa-arrow-left"></i></a>
+          </div>
+          <img class="logo" src="logo_white.png" alt="logo">
+          <div class="circle">
+            <a href="../homepagev2.html"><i class="fa-solid fa-house"></i></a>
+          </div>
+        </nav>
+        <img src="Cover/nella kharisma.jpeg" class="cover-img" />
+        <h1>Konco Mesra</h1>
+        <p>Nella Kharisma</p>
+
+        <audio id="music">
+          <source src="Musik/nella kharisma.mp3" type="audio/mpeg" />
+        </audio>
+        <div class="timing">
+            <div id="currentTime">0:00</div>
+            <div id="durasi-lagu">5:08</div>
+        </div>
+        <input class="slider" id="progress" type="range" value="0">
+
+        <div class="audio-control">
+        <button class="mute" id="muteButton" onclick="toggleMute()">
+        <i id="icon" class="fa-solid fa-volume-high"></i>
+        </button>
+        <input class="volume-musik" type="range" value="100" id="volume" min="0" max="100" />
+        </div>
+
+        <div class="control">
+          <div><a href="nella_kharisma.html"><i class="fa-solid fa-backward-fast"></i></a></div>
+          <div onclick="PlayPause()">
+            <i class="fa-solid fa-play" id="logokontrol"></i>
+          </div>
+          <div><a href="happy_asmara.html"><i class="fa-solid fa-forward-fast"></i></a></div>
+        </div>
+      </div>
+    </div>
+
+
+  <div class="list">You May Like</div>
+  <br>
+  <br> 
+  <div class="container">
+      <div class="list-song">
+          <a href="/Dangdut/Cover/nella kharisma.jpeg">
+              <img src="/album/nella kharisma.jpeg.jpg">
+              <div class="deskripsi">
+                  <h4>Genre : Dangdut</h4>
+                  <h4></h4>
+                  <br>
+                  <p>- Konco Mesra</p>
+              </div>
+          </a>
+      </div>
+      <div class="list-song">
+          <a href="/Pop/SZA.html">
+          <img src="/Pop/sza.jpg">
+          <div class="deskripsi">
+              <h4>Album : SOS</h4>
+              <h4>SZA</h4>
+              <br>
+              <p>- Kill Bill</p>
+              <p>- Snooze</p>
+          </div>
+      </a>
+      </div>
+      <div class="list-song">
+          <a href="/Rock/dear_god.html">
+          <img src="/album/Rock.png">
+          <div class="deskripsi">
+              <h4>Genre : Rock</h4>
+              <h4>Avenged Sevenfold</h4>
+              <br>
+              <p>- Dear God</p>
+          </div>
+      </a>
+      </div>
+
+    <script src="script.js"></script>
+  </body>
+</html>

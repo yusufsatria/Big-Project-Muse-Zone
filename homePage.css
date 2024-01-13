@@ -1,0 +1,193 @@
+@import url("https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,400;1,600&display=swap");
+
+
+* {
+    padding: 0;
+    margin: 0;
+    font-weight: 800;
+    text-decoration: none;
+    color: black;
+}
+
+/* .navbar { grid-area: navbar; }
+.container { grid-area: container; }
+.playlist { grid-area: content; }
+.artist { grid-area: below; }
+footer {grid-area: footer;} */
+
+.main-container {
+    padding: 0 40px 10px 40px;
+    /* display: grid;
+    grid-template-areas: 
+    'navbar navbar navbar navbar navbar navbar'
+    'container container container container container container'
+    'content content content content content content'
+    'below below below below below below'
+    'footer footer footer footer footer footer'; */
+    gap: 10px;
+    font-family: 'Poppins';
+}
+
+
+
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    text-align: center;
+}
+
+.navbar img {
+    width: 200px;
+    margin-top: 0;
+}
+
+.material-symbols-outlined {
+    font-size: 40px;
+    padding: 30px 15px 30px 15px;
+    cursor: pointer;
+    color: black;
+    
+} 
+
+.fa-house {
+    font-size: 30px;
+    padding: 30px 15px 30px 15px;
+    cursor: pointer;
+    color: black;
+}
+
+.fa-house:hover{
+    scale: 110%;
+    transition: 0.15s;
+}
+
+.navbar .material-symbols-outlined:hover {
+    scale: 110%;
+    transition: 0.15s;
+}
+
+.user-dropdown {
+    position: relative;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.user-icon {
+    font-size: 24px;
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #f9f9f9;
+    width: 100px;
+    box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+}
+
+.dropdown-content a {
+    color: black;
+    padding: 12px 16px;
+    text-decoration: none;
+    display: block;
+}
+
+.dropdown-content a:hover {
+    background-color: #f1f1f1;
+}
+
+.container {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    justify-content: space-between;
+    gap: 5px;
+    padding: 0 10px 10px 10px;
+
+    justify-items: center;
+}
+
+.container p {
+    font-size: 13px;
+}
+
+.list-song a {
+    width: 355px;
+    display: flex; 
+    align-items: center;
+    padding: 8px;
+    background-color: #eff8ff;
+    border-radius: 10px;
+}
+
+.list-song a:hover {
+    background-color: #d5ecff;
+    transition: 0.15s;
+    border-radius: 10px;
+    /* color: rgba(0, 106, 255, 0.863); */
+    scale: 102%;
+}
+
+.list-song img {
+    width: 50px;
+    margin-right: 10px;
+    border-radius: 10px;
+}
+
+
+.content {
+    height: 2cm;
+}
+
+.playlist {
+    padding: 40px 10px 10px 10px;
+    
+}
+
+.list {
+    display: flex;
+    gap: 30px;
+    justify-content: space-between;
+}
+
+.list-genre {
+    padding: 20px;
+    background-color: #eff8ff;
+    border-radius: 10px;
+    
+}
+
+
+.list-genre img {
+    width: 5cm;
+    height: 4.5cm;
+    border-radius: 10px;
+}
+
+.list-genre:hover {
+    background-color: #d5ecff;
+    transition: 0.15s;
+    border-radius: 10px;
+}
+
+.artist {
+    padding: 40px 10px 10px 10px;
+    
+}
+
+.list-artist {
+    padding: 20px;
+    background-color: #eff8ff;
+    border-radius: 10px;
+}
+
+.list-artist img {
+    width: 180px;
+    border-radius: 30%;
+}
+
+
+.list-artist:hover {
+    background-color: #d5ecff;
+    transition: 0.15s;
+    border-radius: 10px;
+}
+

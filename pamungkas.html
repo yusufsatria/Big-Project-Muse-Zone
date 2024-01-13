@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Zone</title>
+    <script src="https://kit.fontawesome.com/828ceca135.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet"
+        href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" />
+    <link rel="stylesheet" href="playlist.css">
+</head>
+
+<body>
+    <div class="main-container">
+        <nav class="navbar">
+            <a href="homepagev2.html"><i class="fa-solid fa-circle-arrow-left"></i></a>
+            <img src="album/MuseZone1.png">
+            <i class="fa-regular fa-circle-user"></i>
+        </nav>
+        <h2>Artist</h2>
+        <div class="playlist">
+            <img src="./album/pamungkas.jpg">
+            <div class="deskripsi">
+                <div class="left-side">
+                    <h2>Pamungkas</h2>
+                    <p>By Muse Zone</p>
+                </div>
+                <div class="right-side">
+                    <span id="favorite" onclick="love()" class="material-symbols-outlined">favorite
+                    </span>
+                </div>
+            </div>
+
+        </div>
+
+        <h2>List Lagu</h2>
+        <div class="list-lagu">
+            <div class="song">
+                <a class="lagu" href="Pop/pamungkas.html">
+                    <img src="Pop/pamungkas.jpg" >
+                    <div class="deskripsi">
+                        <div >
+                            <h4>Monolog</h4>
+                            <p>Pamungkas</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="unduh" href="homepagev2.html"><span class="material-symbols-outlined">download</span></a>
+            </div>
+            <div class="song">
+                <a class="lagu" href="Pop/pamungkaskenanganmanis.html">
+                    <img src="Pop/pamungkas.jpg" >
+                    <div class="deskripsi">
+                        <div >
+                            <h4>Kenangan Manis</h4>
+                            <p>Pamungkas</p>
+                        </div>
+                    </div>
+                </a>
+                <a class="unduh" href="homepagev2.html"><span class="material-symbols-outlined">download</span></a>
+            </div>
+
+        </div>
+    </div>
+    <script>
+        function love() {
+            var favoriteIcon = document.getElementById("favorite");
+            var isFavorite = favoriteIcon.classList.contains('favorite');
+
+            if (isFavorite) {
+                favoriteIcon.classList.remove('favorite');
+            } else {
+                favoriteIcon.classList.add('favorite');
+            }
+        }
+
+        
+    </script>
+</body>
+
+</html>
