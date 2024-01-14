@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Muse Zone Music Player</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/36da94211e.js" crossorigin="anonymous"></script>
+</head>
+
+<body>
+    <div class="containerbase">
+        <div class="player-actual">
+            <nav>
+                <div class="circle">
+                    <a href="../Rock.html"><i class="fa-solid fa-arrow-left"></i></a>
+                </div>
+                <img class="logo" src="logo.png" alt="logo">
+                <div class="circle">
+                    <a href="../homepagev2.html"><i class="fa-solid fa-house"></i></a>
+                </div>
+            </nav>
+            <!-- Detail Lagu-->
+            <img src="Cover/DearGodCover.jpg" class="cover-img">
+            <h1 class="song">Dear God</h1>
+            <p class="artist">Avenged Sevenfold</p>
+
+            <audio id="music">
+                <source src="Musik/Dear God.mp3" type="audio/mpeg">
+            </audio>
+            <!--mengatur laju lagu-->
+            <div class="timing">
+                <div id="currentTime">0:00</div>
+                <div id="durasi-lagu">4:38</div>
+            </div>
+            <input type="range" value="0" id="progress">
+            <div class="audio-control">
+                <button class="mute" id="muteButton" onclick="toggleMute()">
+                    <i id="icon" class="fa-solid fa-volume-high"></i>
+                </button>
+                <input class="volume-musik" type="range" value="100" id="volume" min="0" max="100" />
+            </div>
+
+            <!--mengatur play dan pause-->
+            <div class="control">
+                <div class="control"><a href="dream_on.html"><i class="fa-solid fa-backward-fast"></i></a></div>
+                <div onclick="PlayPause()"><i class="fa-solid fa-play" id="logokontrol"></i></div>
+                <div class="control"> <a href="fortunate_son.html"> <i class="fa-solid fa-forward-fast"></i></a></div>
+            </div>
+        </div>
+    </div>
+
+
+    <div class="list">You May Like</div>
+    <br>
+    <br> 
+    <div class="container">
+        <div class="list-song">
+            <a href="/Dangdut/Cover/nella kharisma.jpeg">
+                <img src="/album/nella kharisma.jpeg.jpg">
+                <div class="deskripsi">
+                    <h4>Genre : Dangdut</h4>
+                    <h4></h4>
+                    <br>
+                    <p>- Konco Mesra</p>
+                </div>
+            </a>
+        </div>
+        <div class="list-song">
+            <a href="/Pop/SZA.html">
+            <img src="/Pop/sza.jpg">
+            <div class="deskripsi">
+                <h4>Album : SOS</h4>
+                <h4>SZA</h4>
+                <br>
+                <p>- Kill Bill</p>
+                <p>- Snooze</p>
+            </div>
+        </a>
+        </div>
+        <div class="list-song">
+            <a href="/Pop/pamungkas.html">
+            <img src="/Pop/pamungkas.jpg">
+            <div class="deskripsi">
+                <h4>Album : Walk To Talk</h4>
+                <h4>Pamungkas</h4>
+                <br>
+                <p>- Monolog</p>
+                <p>- Kenangan Manis</p>
+                <p>- Boy</p>
+            </div>
+        </a>
+        </div>
+
+    <script src="script.js"></script>
+
+</body>
+
+</html>
